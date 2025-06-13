@@ -44,7 +44,7 @@ public class MyPageViewHandler {
         try {
             if (!deliveryStarted.validate()) return;
             // view 객체 조회
-            Optional<MyPage> myPageOptional = myPageRepository.findByOrderId(
+            Optional<MyPage> myPageOptional = myPageRepository.findById(
                 deliveryStarted.getOrderId()
             );
 
@@ -67,7 +67,7 @@ public class MyPageViewHandler {
         try {
             if (!orderCancelled.validate()) return;
             // view 객체 조회
-            Optional<MyPage> myPageOptional = myPageRepository.findByOrderId(
+            Optional<MyPage> myPageOptional = myPageRepository.findById(
                 orderCancelled.getId()
             );
 
